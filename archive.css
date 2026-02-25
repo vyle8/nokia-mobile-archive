@@ -1,0 +1,433 @@
+/*navigation bar*/
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  font-family: Press Start 2P;
+  font-size: 14px;
+}
+
+.nav a {
+  color: #00ff08;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: hsl(0, 0%, 0%);
+  color: #ffffff;
+  font-family: "Press Start 2P", serif;
+}
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 28px;
+  opacity: 0.5;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-family: "Press Start 2P", serif;
+  font-size: 95px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: VT323, serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* .date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 60px;
+} */
+
+.intro {
+  font-style: italic;
+  margin-bottom: 60px;
+}
+
+.divider {
+  letter-spacing: 4px;
+  color: #aaa;
+  margin: 40px 0 60px;
+}
+
+article {
+  text-align: middle;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+article p {
+  margin-bottom: 32px;
+}
+
+.image {
+  display: block;
+  margin: 3rem auto;
+  width: 600px;
+  image-rendering: pixelated;
+}
+
+/* .hands {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* or however tall your section is */
+
+
+/* .hand {
+  position: absolute;
+  bottom: 25%; /* adjust to match your current vertical position */
+
+
+/* LEFT HAND
+.left-hand {
+  left: -5;
+}
+
+/* RIGHT HAND */
+/* .right-hand {
+  right: 4;
+} */  
+
+
+h3 {
+  font-family: "VT323", serif;
+  font-size: 30px;
+  font-weight: 0;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+/* .pixel-stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(#00ff88 8px, transparent 8px),
+    linear-gradient(90deg, #00ff88 8px, transparent 8px);
+
+  background-size: 80px 80px;
+  background-position: 64px 64px;
+
+  opacity: 0.1;
+} */
+
+.pixel-sprinkles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(#00ff88 1.5px, transparent 1px);
+  background-size: 55px 55px;
+
+  opacity: 50;
+  
+} */
+
+.center-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.press-start {
+  font-family: "Press Start 2P", monospace;
+  font-size: 14px;
+  padding: 18px 32px;
+  background: transparent;
+  color: #00ff66;
+  border: 2px solid #00ff66;
+  text-decoration: none;
+  cursor: pointer;
+}
+.press-wrapper {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.press-start {
+  display: inline-block;
+  padding: 20px 60px;
+
+  font-family: 'Press Start 2P', monospace;
+  font-size: 18px;
+
+  color: #00ff66;
+  text-decoration: none;
+
+  border: 4px solid #00ff66;
+  background: transparent;
+
+  transition: 0.2s ease-in-out;
+}
+
+.press-start:hover {
+  background: #00ff66;
+  color: black;
+  box-shadow: 0 0 20px #00ff66;
+}
+/* @keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.press-start {
+  animation: blink 1.5s infinite;
+} */
+
+/* Hide bg-number everywhere */
+.bg-number {
+  display: none;
+}
+
+/* Show it only on the Models page */
+.models-page .bg-number {
+  display: block;
+}
+/* BIG BACKGROUND NUMBER */
+.bg-number {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 100px;
+  color: rgb(0, 255, 34);
+  text-align: center;
+  margin-top: 40px;
+  margin-left: -20px;   /* move left */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* MODEL SECTION LAYOUT */
+.model-section {
+  padding: 150px 0;
+}
+
+.model-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.model-text h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 150px;
+  color: #39FF14;
+}
+
+.model-text p {
+  max-width: 850px;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  color: white;
+  text-align: left;
+}
+
+.model-image {
+  width: 250px;
+}
+
+/* Flip layout */
+.reverse .model-content {
+  flex-direction: row-reverse;
+}
+
+.bg-number {
+  transition: all 0.2s ease;
+}
+
+.bg-number:hover {
+  text-shadow:
+    0 0 5px #4f7a48,
+    0 0 10px #39ff14,
+    0 0 20px #39ff14,
+    0 0 40px #00ffcc;
+}
+
+.models-page {
+  background-color: #000;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#00ff66 1px, transparent 1px),
+    linear-gradient(rgba(29, 211, 29, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 229, 32, 0.05) 1px, transparent 1px);
+
+  background-size:
+    200px 200px,   /* white stars */
+    200px 200px,   /* green stars */
+    40px 40px,     /* grid */
+    40px 40px;
+
+  background-position:
+    0 0,
+    60px 40px,
+    0 0,
+    0 0;
+}
+
+/*Advertisment page*/
+.advertising-page .screen-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
+}
+
+.advertising-page .screen-box {
+  width: 1000px;
+  background: #37ff00;
+  padding: 40px;
+  border: 6px solid #0f380f;
+  box-shadow: inset 0 0 0 4px #306230;
+}
+
+.advertising-page .screen-top {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #0f380f;
+}
+
+.advertising-page .screen-quote {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 50px;
+  line-height: 1.8;
+  color: #0f380f;
+  text-align: center;
+  margin-top: 40px auto; 
+  margin-bottom: 60px; 
+}
+.hearts{
+  color: red; 
+}
+
+
+.ads-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 60px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.ads-title br {
+  display: block;
+}
+.ads-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.ads-gallery img {
+  width: 400px;
+  height: auto;
+  border: 4px solid #1b5e20;   /* dark Nokia green */
+  image-rendering: pixelated;  /* keeps pixel vibe */
+}
+
+.advertising-page {
+   background-color: #000;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#00ff66 1px, transparent 1px),
+    linear-gradient(rgba(29, 211, 29, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 229, 32, 0.05) 1px, transparent 1px);
+
+  background-size:
+    200px 200px,   /* white stars */
+    200px 200px,   /* green stars */
+    40px 40px,     /* grid */
+    40px 40px;
+
+  background-position:
+    0 0,
+    60px 40px,
+    0 0,
+    0 0;
+}
+
+
+.snake-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.snake-container {
+  background: #39ff14; /* Nokia green */
+  padding: 20px;
+  border: 6px solid #0f380f;
+  box-shadow: 0 0 0 6px #306230;
+  text-align: center;
+}
+
+#snakeGame {
+  background: #8bac0f;
+  display: block;
+  margin: 0 auto;
+}
+
+.snake-instructions {
+  font-family: 'Press Start 2P';
+  font-size: 12px;
+  margin-top: 15px;
+  color: #0f380f;
+}
+.interface-page{
+   background-color: #000;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#00ff66 1px, transparent 1px),
+    linear-gradient(rgba(29, 211, 29, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 229, 32, 0.05) 1px, transparent 1px);
+
+  background-size:
+    200px 200px,   /* white stars */
+    200px 200px,   /* green stars */
+    40px 40px,     /* grid */
+    40px 40px;
+
+  background-position:
+    0 0,
+    60px 40px,
+    0 0,
+    0 0;
+}
