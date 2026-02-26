@@ -384,7 +384,6 @@ html {
     0 0;
 }
 
-
 .snake-section {
   display: flex;
   justify-content: center;
@@ -430,4 +429,108 @@ html {
     60px 40px,
     0 0,
     0 0;
+}
+
+.game-over-section {
+  margin-top: 80px;
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+  position: relative;
+}
+
+/* Big red background shape */
+.red-block {
+  background: #c72c2c;
+  padding: 40px 60px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Pixel title */
+.red-block h1 {
+  margin: 0;
+  font-size: 60px;
+  color: #0f380f;
+  line-height: 1.1;
+}
+
+/* Small text under */
+.sub-text {
+  margin-top: 15px;
+  font-size: 25px;
+  color: #0f380f;
+}
+
+.game-over-section {
+  margin-top: 120px;
+  padding: 120px 0;
+  /* background: #9bbc0f; */
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+/* QUESTION MARK */
+.question-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.question-mark {
+  font-size: 300px;
+  color: #c72c2c;
+  animation: flash 1s infinite alternate;
+  text-shadow: 8px 8px #0f380f;
+  margin-top: 120px;   /* pushes it away from snake */
+  padding: 120px 0; 
+}
+
+/* Flash animation */
+@keyframes flash {
+  from { opacity: 1; }
+  to { opacity: 0.4; }
+}
+
+/* GAME TEXT */
+.game-text {
+  font-size: 48px;
+  color: #0f380f;
+  margin: 0;
+}
+
+/* .sub-text {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #0f380f;
+} */
+
+/* PIXEL STARS */
+.star {
+  width: 10px;
+  height: 10px;
+  background: #c72c2c;
+  position: absolute;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0.3; transform: scale(1.5); }
+}
+
+/* Position stars around question mark */
+.star1 { top: 70px; left: -40px; }
+.star2 { top: 80px; right: -50px; }
+.star3 { bottom: -10px; left: -30px; }
+.star4 { bottom: 30px; right: -40px; }
+.star5 { bottom: 30px; right: -40px; }
+
+.plain-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
