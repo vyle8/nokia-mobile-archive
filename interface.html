@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nokia Mobile Archive</title>
+  <link rel="stylesheet" href="archive.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body class="interface-page">
+<body>
+<nav class="nav">
+ <a href="index.html">HOME</a>
+  <a href="nokiamodels.html">NOKIA MODELS</a>
+  <a href="advertisements.html">ADs & MEDIA</a>
+  <a href="interface.html">INTERFACE & INTERACTIONS</a>
+</nav>
+
+<main class="page">
+
+    <div class="logo"></div>
+
+    <h1>SNAKE GAME</h1>
+    <h2>Snake is a classic mobile game that became widely popular on early Nokia phones. Players control a snake that moves across the screen, collecting food to grow longer while avoiding collisions with walls or its own body. Its simple graphics and straightforward controls made it one of the most recognizable and iconic games in early mobile phone culture.</h2>
+    <p>
+    <p class="date"></p>
+    <div class="divider">* * *</div>
+   <img src="snake_game_digitalartsblog2 (1).webp"  class="image">
+   <h3>"Snake Game" Photo by Digital Arts Blog </h3>
+    <article>
+      <p>NOTE: If “GAME OVER” appears while the Snake game is still running, press “OK” to restart. Thanks ;]</p>
+
+      </p>
+
+      </p>
+    </article>
+    
+
+<section class="snake-section">
+  <div class="snake-container">
+    <canvas id="snakeGame" width="600" height="600"></canvas>
+    <p class="snake-instructions">Use arrow keys to play</p>
+    <div id="startBtn">PRESS HERE TO PLAY</div>
+  </div>
+</section>
+
+<!-- <div class="question-wrapper">
+    <div class="question-mark">?</div>
+
+    <!- Pixel stars -->
+    <!-- <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+  </div> --> 
+
+<div class="closing">
+  <p class="question">“In a time before constant connection, what did it mean to stay connected? Leave a message</p>
+
+  <input type="text" id="userInput" placeholder="TYPE YOUR MESSAGE..." class="retro-input">
+
+  <div id="messageScreen" class="message-screen"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+const input = document.getElementById("userInput");
+const screen = document.getElementById("messageScreen");
+
+// load saved messages when page opens
+window.onload = function() {
+  const messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+  messages.forEach((msg, index) => {
+    displayMessage(msg, index);
+  });
+};
+
+// when user presses Enter
+input.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const message = input.value.trim();
+
+    if (message !== "") {
+      let messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+      messages.push(message);
+      localStorage.setItem("messages", JSON.stringify(messages));
+
+      displayMessage(message, messages.length - 1);
+      input.value = "";
+    }
+  }
+});
+
+// function to show message on screen
+function displayMessage(msg, index) {
+  const p = document.createElement("p");
+  p.textContent = "> " + msg;
+
+  // click to delete
+  p.addEventListener("click", function() {
+    deleteMessage(index);
+  });
+
+  screen.appendChild(p);
+}
+
+// delete message
+function deleteMessage(index) {
+  let messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+  messages.splice(index, 1); // remove correct one
+  localStorage.setItem("messages", JSON.stringify(messages));
+
+  // refresh screen
+  screen.innerHTML = "";
+  messages.forEach((msg, i) => displayMessage(msg, i));
+}
+</script>
+
+
+
+
+<div class="game-over-section">
+  <div class="red-block">
+    <h1>GAME<br>OVER</h1>
+  </div>
+
+</div>
+  <!-- <p class="sub-text">OR NOT</p>
+
+  <div class="game-over-section"> -->
+
+</div>
+  
+</div>
+<script src="snake.js"></script>
+
+
+
